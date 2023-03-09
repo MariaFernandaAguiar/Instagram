@@ -1,40 +1,7 @@
-<div class="container home-sections d-flex flex-row justify-content-center align-itens-center">
-    <div class="images-section pt-3 d-none d-lg-block"></div>
+<h1>This is the Home Page</h1>
 
-    <div class ="login-section pt-3">
-        <div class="card text-center pt-5" style="width: 23rem">
-            <%= image_tag('logo.png', class:"card-img-top") %>
-            <div class="card-body">
-                <div class="mb-3 mt-4">
-                    <input type="email" class="form-control" id="email" placeholder="Phone number, username or email">
-                </div>
-                <div class="mb-3">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <a href="#" class="btn btn-primary d-block">Log In</a>
-                
-                <div class="d.flex align-items-center mt-4">
-                    <div class="line"></div>
-                    <h2 class="line-text">OR</h2>
-                    <div class="line"></div>
-                </div>
-
-                <a href="#" class="d-block mt-4 text-decoration-nome fw-bold">
-                <%= image_tag("facebook.png", class:"facebook")%>
-                    Log in with Facebook
-                </a>
-
-                <a href="#" class="f5-6 d-block my-4 text-decoration-none">Forget password?</a>
-            </div>
-
-            <div class="card text-center py-2 mt-3" style="width: 23rem;">
-                <div class="card-text">
-                    Don`t have an account?
-                    <a href="#" class="f5-6 my-4 text-decoration-none">Sing up</a>
-                </div>
-            </div>
-        </div>
+<% if current_user %>
+    <%# <%= link_to 'Sign out', destroy_user_session_path , method: :delete %>
+    <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
     
-    </div>
-
-</div>
+<%end%>
