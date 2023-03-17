@@ -1,10 +1,5 @@
-<%# <h1>This is the Home Page</h1>
 
-<% if current_user %>
-    <%# <%= link_to 'Sign out', destroy_user_session_path , method: :delete %>
-    <%# <%= button_to 'Sign out', destroy_user_session_path, method: :delete %> 
-    
-<%# <%end%>
+<%= render 'layouts/flash_messages'%>
 <div class="d-flex my-5 justify-content-center gap-5">
     <div class="d-flex flex-column gap-3"> 
         <%= render 'story/stories_list'%>
