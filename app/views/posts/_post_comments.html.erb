@@ -6,7 +6,7 @@
     </a>
     <%end%>
     <% post.comments.last(5).each do |comment| %>
-        <p class="card-text m-0"><span class="fw-bold"><%= comment.user.user_name %> </span><%= comment.body%></p>
+        <p class="card-text m-0"><span class="fw-bold"><%= link_to comment.user,  class:"a-decoration-none" do %><%= comment.user.user_name %> </span><%end%><%= comment.body%></p>
 
 
         <!-- Modal -->
