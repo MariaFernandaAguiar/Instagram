@@ -6,6 +6,8 @@
       <p class="m-0 fw-bold"><%= user.user_name%></p>
       <button class="btn border border-1"> Message </button>
       <%= render 'layouts/shared/follow_state', user: user %>
+
+      
       <% if user == current_user %>
         <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-transparent border"%>
       <% end %>
